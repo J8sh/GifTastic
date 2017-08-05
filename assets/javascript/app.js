@@ -7,7 +7,7 @@
 $(function(){
 	populateButtons(searchArray, 'searchButton', '#buttonsArea');
 	console.log("Page Loaded");
-})
+});
 
 var searchArray = ['The Office', 'Lord of the Rings', 'Jumanji'];
 
@@ -44,8 +44,8 @@ $(document).on('click', '.searchButton', function(){
 				searchDiv.append(image);
 				$('#searches').append(searchDiv);
 			}
-		})
-})
+		});
+});
 //image click action
 $(document).on('click', '.searchImage', function(){
 	var state = $(this).attr('data-state');
@@ -56,10 +56,10 @@ $(document).on('click', '.searchImage', function(){
 		$(this).attr('src', $(this).data('still'));
 		$(this).attr('data-state', 'still');
 	}
-})
+});
 //---------------------------------------------------NOT WORKING?------------------------------------
 $('#addSearch').on('click', function(){
 	var newSearch = $('input').val().trim();
 	searchArray.push(newSearch);
 	populateButtons();
-})
+});
